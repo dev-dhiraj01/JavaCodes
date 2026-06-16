@@ -32,7 +32,6 @@ public class student {
         st.age = sc.nextInt();
         System.out.println("Enter the college name of student : ");
         st.Cname = sc.next();
-        
         st.getdata();
         sc.close();
     }
