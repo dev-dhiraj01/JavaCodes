@@ -1,4 +1,4 @@
-package Advance;
+// package Advance;
 
 public class day1 {
     
