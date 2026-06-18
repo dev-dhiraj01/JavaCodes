@@ -134,5 +134,38 @@ class day4 {
             System.out.println("The two strings are not anagrams.");
         }
 
+        //a university stores marks rehul = 85 amit 92 priya 78 neha 96 
+        // find the topper 
+        // find the avg,
+        //  how many stud scoring above 90
+
+        HashMap<String, Integer> student = new HashMap<>();
+        student.put("Rahul", 85);
+        student.put("Amit", 92);
+        student.put("Priya", 78);
+        student.put("Neha", 96);
+
+        int topperMarks = 0;
+        String topperName = "";
+        int totalMarks = 0;
+        int countAbove90 = 0;
+
+        for (String name1 : student.keySet()) {
+            int marks1 = student.get(name1);
+            totalMarks += marks1;
+            if (marks1 > topperMarks) {
+                topperMarks = marks1;
+                topperName = name1;
+            }
+            if (marks1 > 90) {
+                countAbove90++;
+            }
+        }
+
+        double average = (double) totalMarks / student.size();
+        System.out.println("Topper: " + topperName + " with " + topperMarks + " marks");
+        System.out.println("Average marks: " + average);
+        System.out.println("Number of students scoring above 90: " + countAbove90);
+
     }
 }
