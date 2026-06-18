@@ -1,7 +1,24 @@
 import java.util.HashMap;
+import java.util.Scanner;
+
+class palan{
+    
+    palan(){
+        System.out.println("hello");
+    }
+}
+
+class palan2 extends palan{
+     palan2(){
+        super();
+        System.out.println("hello2");
+    }
+}
 
 class day4 {
     public static void main(String[] args) {
+        palan2 pn = new palan2();
+       
         String str = "Dhiraj";
 
         for (int i = 0; i < str.length(); i++) {
@@ -167,5 +184,34 @@ class day4 {
         System.out.println("Average marks: " + average);
         System.out.println("Number of students scoring above 90: " + countAbove90);
 
+        int result = 0;
+        int n = 15;
+       result = (n%2 == 0) ?  10:  20;
+System.out.println(n%2==0 ? 10 :20);
+        System.out.println(result);
+   
+
+    char ch = ' ';
+        Scanner sc = new Scanner(System.in);
+    
+    while(true){
+        System.out.println("Enter your choice ");
+        ch = sc.next().charAt(0);
+
+        switch(ch){
+            case 'a':   System.out.println("You have entered a");
+            break;
+            case 'b':   System.out.println("You have entered b");
+            break;
+            case 'c':   System.out.println("You have entered c");
+            break;
+        }
+        if(ch == 'd'){
+            break;
+        }
+        
     }
+    sc.close();
+     }
 }
+
