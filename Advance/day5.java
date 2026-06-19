@@ -48,7 +48,7 @@ public class day5{
 
     Scanner sc = new Scanner(System.in);
     System.out.println("enter the Id");
-    int num = sc.nextInt();
+    int num = 5;
     boolean flag = true;
     
     for(int i = 2; i < num; i++){
@@ -70,7 +70,37 @@ public class day5{
 
     sc.close();
 
+    //rotate array elements k times 
+    // find maximum sum sub array of size 3
+
+    int arr[] = {11,2,3,4,5};
+    int max = 0;
+    n= 5;
+    for(int i = 0; i < n-2; i++){
+            int sum = 0;
+        for(int j = i ; j < i + 3; j++){
+            sum += arr[j];
+        }
+        max = Math.max(sum,max);
     }
+    System.out.println(max);
 
 
+    String name = "nayan";
+    char[] arr1 = name.toCharArray();
+    int s = 0;
+    int e = name.length()-1;
+
+    while(s<e){
+        char temp = arr1[s];
+        arr1[s] = arr1[e];
+        arr1[e]= temp;
+        s++;
+        e--;
+    }
+  name = new String(arr1);
+    System.out.println(name);
+
+
+    }
 }
