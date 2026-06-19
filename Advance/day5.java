@@ -68,7 +68,7 @@ public class day5{
         System.out.println("the id "+num+ " is not prime ");
     }
 
-    sc.close();
+   
 
     //rotate array elements k times 
     // find maximum sum sub array of size 3
@@ -101,6 +101,69 @@ public class day5{
   name = new String(arr1);
     System.out.println(name);
 
+    //a smart city pro has installed 100 of sensors accross different areas to monitor traffic air quality and public safety each sensor is assigned a unique id no engineers have classified certain sensor as critical sensors based of a math rule related to the id no your task is to determine whether a given sensor belongs to the critical monitoring group input sensor Id = 97 and output critical sensor detected
+
+
+    System.out.println("enter the Sensor Id");
+    int num2 = 97;
+    boolean flag1 = true;
+    
+    for(int i = 2; i < num2; i++){
+        if(num2%i == 0){
+            flag1 = false;
+            break;
+        }
+        else{
+            flag1 = true;
+            
+        }
+    }
+    if(flag == true){
+        System.out.println("the id "+num2+ "is a Sensor ");
+    }
+    else{
+        System.out.println("the id "+num2+ " is not Sensor ");
+    }
+
+    //a company receives customer feedback msg everyday to identify unique patterens in customer communication the analytics team wants to find first character that appears only once in a feed back this helps them to detect uncommon keywords and special identifiers in the text input String feedback = aabbcdde 
+
+    String str = "aabbcdde";
+    HashMap<Character , Integer> feedback = new HashMap<>();
+    for(int i = 0; i < str.length();i++){
+        char c = str.charAt(i);
+        if(feedback.containsKey(c)){
+            feedback.put(c,feedback.get(c)+1);
+        }
+        else{
+            feedback.put(c,1);
+        }
+    }
+    for(int i = 0; i < str.length();i++){
+        char c = str.charAt(i);
+        if(feedback.get(c) == 1){
+        
+        System.out.println("The first character with single occurence is "+ c);
+        break;
+        }
+    }
+
+    // an ecommerce comp receives 1000 of orders everyday the analytics team wants to determine how many time each product has been ordered so that they can identify popular items and manage inventory effectively given a list of product names count how many time each product has been ordered string orders = laptop mobils lap headphones mob lap
+    
+    String orders = "laptop mobile laptop headphone mobile";
+    HashMap<String, Integer> freqency1  = new HashMap<>();
+    String[] words1 = orders.split(" ");
+
+    for(String word1 : words1){
+        if(freqency1.containsKey(word1)){
+            freqency1.put(word1,freqency1.get(word1)+1);
+        }
+        else{
+            freqency1.put(word1,1);
+        }
+    }
+    System.out.println(freqency1);
+
+    sc.close();
 
     }
 }
