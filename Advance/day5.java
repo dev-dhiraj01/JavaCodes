@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class day5{
 
@@ -13,7 +14,7 @@ public class day5{
             }
         }
         System.out.println(gcd);
-        
+
         //a news wevsite wants to count the repeated words "java is easy java is powerfull";
         String sentence = "java is easy java is powerfull";
         HashMap<String, Integer> wordFrequency = new HashMap<>();
@@ -28,6 +29,48 @@ public class day5{
         }
         System.out.println(wordFrequency);
 
+        //printing the prime numbers till n 
+
+    int n = 10;
+    int id = 0;
+    for(int i = 1; i <= n ; i++){
+        for(int j = 2; j < i ; j++){
+            if(i% j == 0){
+                break;
+            }else{
+                id = i;
+            }
+        }
+        System.out.println(id);
     }
+
+    //an online game issues participent id's the platform rewords players whose id are prime no with bonus point before awarding the bonus the system must verify whether the id is prime id = 51
+
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter the Id");
+    int num = sc.nextInt();
+    boolean flag = true;
     
+    for(int i = 2; i < num; i++){
+        if(num%i == 0){
+            flag = false;
+            break;
+        }
+        else{
+            flag = true;
+            
+        }
+    }
+    if(flag == true){
+        System.out.println("the id "+num+ " is a prime ");
+    }
+    else{
+        System.out.println("the id "+num+ " is not prime ");
+    }
+
+    sc.close();
+
+    }
+
+
 }
