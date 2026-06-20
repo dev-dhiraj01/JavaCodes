@@ -42,7 +42,15 @@ static void access(String id, int s, int e) {
 
         return totaljumps;
     }
-    
+
+    static void read(String msg,int n){
+        if(n < 0){
+            return;
+        }
+        System.out.println(msg.charAt(n));
+        read(msg,n-1);
+    }
+
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         String name = "madam";
@@ -50,13 +58,15 @@ static void access(String id, int s, int e) {
         access(name,0,n);
 
         System.out.println("Enter the no of levels ");
-        int level = sc.nextInt();
+        int level = 5;
         int total = quantumjumps(level);
         System.out.println("the total no of jumps are : " + total);
         
         int time = 5;
         System.out.println("mission Starts in ");
         countdown(time);
+        String r1 = "mission";
+        read(r1,6);
         sc.close();
     }
 }
