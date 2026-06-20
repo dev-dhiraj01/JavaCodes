@@ -51,6 +51,18 @@ static void access(String id, int s, int e) {
         read(msg,n-1);
     }
 
+     static int findMax(int[] arr, int index) {
+        
+        if (index == arr.length - 1) {
+            return arr[index];
+        }
+  
+        int max = findMax(arr, index + 1);
+
+        return Math.max(arr[index], max);
+    }
+
+
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         String name = "madam";
@@ -67,6 +79,9 @@ static void access(String id, int s, int e) {
         countdown(time);
         String r1 = "mission";
         read(r1,6);
+
+        int[] frames = {45, 78, 92, 67, 89};
+         System.out.println("Highest score is " + findMax(frames, 0));
         sc.close();
     }
 }
