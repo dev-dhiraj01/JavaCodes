@@ -75,7 +75,29 @@ public class day7 {
     System.out.println(frequency);
 
     sc.close();
+    
+    
+    String st = "nayan";
+
+    int s = 0;
+    int e = st.length()-1;
+
+    while(s < e){
+        if(st.charAt(s) == st.charAt(e)){
+            s++;
+            e--;
+        }
+        else{
+            System.out.println("not palindrome");
+            break;
+        }
     }
+            System.out.println("string is a palindrome");
+
+
+    
+    }
+    
 }
 // a digital archive stores historical data in folders and subfolders each folder may contain additional folder creating a multilevel structure before migration to a new system administrators needs to count all documents present in the archives since the structure can contain folders within folders indifinitely the counting process must be performed recursively and determine the total no of documents input = folderA 3 docs , folderB 5 docs , folderC  6 docs 
 
