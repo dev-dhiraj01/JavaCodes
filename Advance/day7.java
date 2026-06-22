@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.HashMap;
 
 
 class Folder {
@@ -56,9 +57,25 @@ public class day7 {
 
     reveiw(5);
 
+
+// a social media company wants to identify trending hashtags from a post the system receives a sequence of hashtags seperated by spaces to process large volumes of data one hashtag is analyze at a time and then the same operation is repeated on the remaining hashtags the frequency of each hashtag should be maintained for trend reporting input = string hashtags java ai java dsa ai java
+
+    HashMap<String,Integer> frequency = new HashMap<>();
+    String hashtags = "java ai java dsa ai java";
+    String[] hashtag = hashtags.split(" ");
+
+    for(String word: hashtag){
+        if(frequency.containsKey(word)){
+            frequency.put(word,frequency.get(word)+1);
+        }
+        else{
+            frequency.put(word,1);
+        }
+    }
+    System.out.println(frequency);
+
     sc.close();
     }
 }
 // a digital archive stores historical data in folders and subfolders each folder may contain additional folder creating a multilevel structure before migration to a new system administrators needs to count all documents present in the archives since the structure can contain folders within folders indifinitely the counting process must be performed recursively and determine the total no of documents input = folderA 3 docs , folderB 5 docs , folderC  6 docs 
-
 
