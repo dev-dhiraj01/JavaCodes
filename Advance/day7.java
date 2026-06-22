@@ -58,7 +58,7 @@ public class day7 {
     reveiw(5);
 
 
-// a social media company wants to identify trending hashtags from a post the system receives a sequence of hashtags seperated by spaces to process large volumes of data one hashtag is analyze at a time and then the same operation is repeated on the remaining hashtags the frequency of each hashtag should be maintained for trend reporting input = string hashtags java ai java dsa ai java
+// a social media company wants to identify trending hashtags from a post the system receives a sequence of hashtags seperated by spaces to process large volumes of data one hashtag is analyze at a time and then the same operation is repeated on the remaining hashtags the frequency of each hashtag should be maintained for trend reporting input = string hashtags java ai java dsa ai java and you have to find the frequency of each word
 
     HashMap<String,Integer> frequency = new HashMap<>();
     String hashtags = "java ai java dsa ai java";
