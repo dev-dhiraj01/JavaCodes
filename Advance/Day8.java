@@ -107,40 +107,40 @@ class Day8{
         int TIME = 16;      
         int MIND = 32;      
 
-        
+        // Current Permissions
         int permissions = 45;
 
-        
+        // 1. Convert to Binary
         System.out.println("Binary Value            : " + Integer.toBinaryString(permissions));
 
-        
+        // 2. Check Time Stone Permission
         if ((permissions & TIME) != 0) {
             System.out.println("Time Stone              : Active");
         } else {
             System.out.println("Time Stone              : Not Active");
         }
 
-        
+        // 3. Add Space Stone Permission
         int updatedPermissions = permissions | SPACE;
         System.out.println("After Adding Space      : " + Integer.toBinaryString(updatedPermissions));
 
-        
+        // 4. Remove Soul Stone Permission
         updatedPermissions = updatedPermissions & (~SOUL);
         System.out.println("After Removing Soul     : " + Integer.toBinaryString(updatedPermissions));
 
-        
+        // 5. Find Changed Permissions
         int changedPermissions = permissions ^ updatedPermissions;
         System.out.println("Changed Permissions     : " + Integer.toBinaryString(changedPermissions));
 
-        
+        // 6. Double Permission Value
         int doubleValue = permissions << 1;
         System.out.println("Double Value            : " + doubleValue);
 
-        
+        // 7. Divide by 4
         int quarterValue = permissions >> 2;
         System.out.println("Quarter Value           : " + quarterValue);
 
-        
+        // 8. Count Active Permissions
         int activePermissions = Integer.bitCount(permissions);
         System.out.println("Active Permissions      : " + activePermissions);
     }
