@@ -56,7 +56,35 @@ class Day8{
         }
 
 
+        
+//a satalite transmits data packates in decimal form the ground station must convert the packate id into binary, double the packate value using bit shifting , verify a permission mask using the and operator ip = packate id  = 13 mask = 26   bin value  double value = 
 
+        int packetId = 13;
+        int mask = 26;
+
+        
+        String binary = Integer.toBinaryString(packetId);
+
+        
+        int doubledValue = packetId << 1;
+
+        
+        int andResult = packetId & mask;
+
+        System.out.println("Packet ID        : " + packetId);
+        System.out.println("Binary Value     : " + binary);
+        System.out.println("Doubled Value    : " + doubledValue);
+        System.out.println("Mask             : " + mask);
+        System.out.println("AND Result       : " + andResult);
+
+        if (andResult != 0) {
+            System.out.println("Permission Granted");
+        } else {
+            System.out.println("Permission Denied");
+        }
+
+
+        //ironman has designed a new armar with multiple security features before activating features jarvis checks whether both the use and the armer posses prerequired permissions input = userPermission = 13 and armerPermission = 11 task find the permission that are active in both
     
     }
 }
