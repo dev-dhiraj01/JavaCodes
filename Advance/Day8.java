@@ -85,6 +85,20 @@ class Day8{
 
 
         //ironman has designed a new armar with multiple security features before activating features jarvis checks whether both the use and the armer posses prerequired permissions input = userPermission = 13 and armerPermission = 11 task find the permission that are active in both
+
+        System.out.println(13 & 11);
+
+        // the flash comperss a time line by repeatedly reducing time intervals the starlabs teams uses bit shifting instead of division ip = timeline = 128 compression = 3; task find the compress time line op
+
+    int time = 128;
+        for(int i = 0; i < 3;i++){
+            time = time>>1;
+        }
+        System.out.println(time);
+
+
+        //following the event of endgame dr strange and ironman develop a multiverse security system to monitor access to diff realities each infinity stone grants a unique permissions represented as binary flag during a rutine sec audit the sys must verify whether the specific permissions are active and combine newly acquire permissions and identify the conflicting permissions and temp decible and calculate the total no of active permissions to improve performance all operations should be bit manipulation ip powerstone = 000001 spacestone 000010 realitystone 000100 soulstone 001000 timestone 010000  mindstone 100000 currunt status int permissions = 45  convert the permission value to binary check whether the timestone permission is active add the spacestone to the permission remove the solestone permission find the diff between the original and updated permissions double the permission value using bit shifting divide the permission value by 4 using bit shifting count the total no of active permission op = binvalue = 10001 timestone = active after adding space stone = 101111 afterremoving soul stone = 100111 change permission = 001010 double value = 90 quarter value = 11 active value = 4 
+
     
     }
 }
