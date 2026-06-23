@@ -99,6 +99,49 @@ class Day8{
 
         //following the event of endgame dr strange and ironman develop a multiverse security system to monitor access to diff realities each infinity stone grants a unique permissions represented as binary flag during a rutine sec audit the sys must verify whether the specific permissions are active and combine newly acquire permissions and identify the conflicting permissions and temp decible and calculate the total no of active permissions to improve performance all operations should be bit manipulation ip powerstone = 000001 spacestone 000010 realitystone 000100 soulstone 001000 timestone 010000  mindstone 100000 currunt status int permissions = 45  convert the permission value to binary check whether the timestone permission is active add the spacestone to the permission remove the solestone permission find the diff between the original and updated permissions double the permission value using bit shifting divide the permission value by 4 using bit shifting count the total no of active permission op = binvalue = 10001 timestone = active after adding space stone = 101111 afterremoving soul stone = 100111 change permission = 001010 double value = 90 quarter value = 11 active value = 4 
 
-    
+        
+        int POWER = 1;      
+        int SPACE = 2;      
+        int REALITY = 4;    
+        int SOUL = 8;       
+        int TIME = 16;      
+        int MIND = 32;      
+
+        
+        int permissions = 45;
+
+        
+        System.out.println("Binary Value            : " + Integer.toBinaryString(permissions));
+
+        
+        if ((permissions & TIME) != 0) {
+            System.out.println("Time Stone              : Active");
+        } else {
+            System.out.println("Time Stone              : Not Active");
+        }
+
+        
+        int updatedPermissions = permissions | SPACE;
+        System.out.println("After Adding Space      : " + Integer.toBinaryString(updatedPermissions));
+
+        
+        updatedPermissions = updatedPermissions & (~SOUL);
+        System.out.println("After Removing Soul     : " + Integer.toBinaryString(updatedPermissions));
+
+        
+        int changedPermissions = permissions ^ updatedPermissions;
+        System.out.println("Changed Permissions     : " + Integer.toBinaryString(changedPermissions));
+
+        
+        int doubleValue = permissions << 1;
+        System.out.println("Double Value            : " + doubleValue);
+
+        
+        int quarterValue = permissions >> 2;
+        System.out.println("Quarter Value           : " + quarterValue);
+
+        
+        int activePermissions = Integer.bitCount(permissions);
+        System.out.println("Active Permissions      : " + activePermissions);
     }
 }
