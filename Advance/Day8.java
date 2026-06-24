@@ -131,7 +131,8 @@ class Day8{
         // 5. Find Changed Permissions
         int changedPermissions = permissions ^ updatedPermissions;
         System.out.println("Changed Permissions     : " + Integer.toBinaryString(changedPermissions));
-
+        System.out.println("difference : "+Integer.toBinaryString(permissions) +" "+Integer.toBinaryString(updatedPermissions) );
+        
         // 6. Double Permission Value
         int doubleValue = permissions << 1;
         System.out.println("Double Value            : " + doubleValue);
@@ -142,6 +143,8 @@ class Day8{
 
         // 8. Count Active Permissions
         int activePermissions = Integer.bitCount(permissions);
-        System.out.println("Active Permissions      : " + activePermissions);
+        String nnn = Integer.toBinaryString(permissions);
+        System.out.println("Active Permissions      : " + activePermissions +" " +nnn);
     }
 }
+
