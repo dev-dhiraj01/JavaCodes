@@ -45,12 +45,12 @@ public class Day9 {
         String couponCode = "aabbcde";
         int[] prizes = {10, 20, 30, 40, 50, 60};
         int luckyToken = 29;
-        int permissions = 5;      // 0101
-        int bonusPermission = 3;  // 0011
+        int permissions = 5;      
+        int bonusPermission = 3;  
         int days = 5;
         int target = 40;
 
-        // Task 1
+     
 
         int totalChocolates = 0;
         int maxChocolates = chocolates[0];
@@ -70,7 +70,7 @@ public class Day9 {
         }
         System.out.println();
 
-        // Task 2
+        
         String reversed = new StringBuilder(secretMessage).reverse().toString();
 
         if (secretMessage.equals(reversed)) {
@@ -80,7 +80,7 @@ public class Day9 {
         }
 
 
-        // Task 3
+        
         HashMap<Character, Integer> map = new LinkedHashMap<>();
 
         for (char ch : couponCode.toCharArray()) {
@@ -102,7 +102,7 @@ public class Day9 {
         System.out.println("First Unique Character = " + firstUnique);
 
 
-        // Task 4
+        
 
         if (isPrime(luckyToken)) {
             System.out.println("Lucky Token");
@@ -110,7 +110,7 @@ public class Day9 {
             System.out.println("Not a Lucky Token");
         }
 
-        // Task 5
+        
 
         int index = binarySearch(prizes, target);
 
@@ -120,18 +120,18 @@ public class Day9 {
             System.out.println("Prize Not Found");
         }
 
-        // Task 6
+        
 
         System.out.println(totalPoints(days));
 
-        // Task 7
+        
 
         System.out.println("AND = " + (permissions & bonusPermission));
         System.out.println("OR = " + (permissions | bonusPermission));
         System.out.println("XOR = " + (permissions ^ bonusPermission));
         System.out.println("Left Shift = " + (permissions << 1));
         System.out.println("Right Shift = " + (permissions >> 1));
-        
+
     }
 }
 // doremon maintains a digital inventory of gajets inside its 4d pockate to quickly locate a gaget the inventory sys automatically arrenge all gaget ids in ascending order one day nobita argently needs a gaget to complete his homework since the inventory contains thousants of gagets checking each gaget one by one would take toomuch time doremon decides an efficient search technique that repeatedly narrows the search space by half until the require gaget is found gagdet 105 105 110 115 120 125 139 t = 120
