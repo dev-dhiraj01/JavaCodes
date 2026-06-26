@@ -10,7 +10,9 @@ can you access arr[arr.length];
  
 are arrays objects in java;
 
+you recieve one new ele at a time and the existing array is already sorted quick sorting algo is a best choice 
 
+a company once occurently O(log n) they using extra memory which algo they should use
 */
 
 class Day11{
