@@ -13,17 +13,16 @@ are arrays objects in java;
 you recieve one new ele at a time and the existing array is already sorted quick sorting algo is a best choice 
 
 a company once occurently O(log n) they using extra memory which algo they should use
+
+can mearg sort work on already sorted array.
+
+
+
 */
 
 class Day11{
 
     public static void main(String args[]){
 
-        int a = 10;
-        int b = -20;
-
-        int c = a+b;
-        System.out.println(c);
-        System.out.println(a+b);
     }
 }
