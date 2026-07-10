@@ -1,4 +1,3 @@
-package Advance;
 
 public class FirstAdvance {
     public static void main(String[] args) {
