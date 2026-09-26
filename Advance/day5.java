@@ -107,7 +107,7 @@ public class day5{
     System.out.println("enter the Sensor Id");
     int num2 = 97;
     boolean flag1 = true;
-    
+    System.out.println(flag1);
     for(int i = 2; i < num2; i++){
         if(num2%i == 0){
             flag1 = false;

@@ -32,8 +32,8 @@ public class Test extends a {
         // System.out.println(age+" "+ name);
 
         sc.close();
-        Test t = new Test();
-        t.nn(10,20);
+        // Test t = new Test();
+        a.nn(10,20);
 
         String str = "Dhiraj";
         System.out.println(str.length());

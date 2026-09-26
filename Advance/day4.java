@@ -17,7 +17,7 @@ class palan2 extends palan{
 
 class day4 {
     public static void main(String[] args) {
-        palan2 pn = new palan2();
+        // palan2 pn = new palan2();
        
         String str = "Dhiraj";
 
