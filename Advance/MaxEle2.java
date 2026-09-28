@@ -17,7 +17,7 @@ public class MaxEle2 {
                 maxSum = Math.max(maxSum, sum);
             
         }
-        System.out.println(maxSum);
+        System.out.println(maxSum); 
         sc.close();
     }
 }
