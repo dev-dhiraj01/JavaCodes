@@ -1,0 +1,161 @@
+import java.util.Scanner;
+import java.util.HashMap;
+//standing betn two mirrors Imagine you are standing in a dressing room with a mirror directly in front of you and another directly behind you the .process the front mirror reflects the back mirror which reflects the front mirror creating an image inside an image inside an image the reflection repeates until the image becoms too tiny 
+//the identifier the input string or property passed into the system 
+//the payload the data object reference occupying that specific memory 
+// the mechanism instead of a scequential linear search which results an o(n) time complexity the sys applies a deterministic mechanism to resolve the exact index instently by bypassing iterative traversal the data payload is retrive in o(1) constant time 
+
+//int the yrs spy uni agents like pathan tiger and kabir must complete a high risk mission vefore a countdown reatches 0 the mission control sys displays the remaining countdown at every second the intelligence team wants to implement this countdown using recurssion instead of loops input is coutndowm 5 output mission starts in 5 
+class day6{
+
+static void countdown(int n){
+
+    if(n >= 1){
+        System.out.println( n);
+        countdown(n-1);
+    }else{
+        System.out.println("mission Activated ");
+    }
+
+}
+static void access(String id, int s, int e) {
+    if (s >= e) {
+        System.out.println("Access Granted...");
+        return;
+    }
+
+    if (id.charAt(s) != id.charAt(e)) {
+        System.out.println("Access Denied...");
+        return;
+    }
+
+    access(id, s + 1, e - 1);
+}
+
+    static int quantumjumps(int level){
+        int totaljumps = 0;
+
+        if(level == 1){
+            return 1;
+        }
+        totaljumps = (level + quantumjumps(level-1));
+
+        return totaljumps;
+    }
+
+    static void read(String msg,int n){
+        if(n < 0){
+            return;
+        }
+        System.out.println(msg.charAt(n));
+        read(msg,n-1);
+    }
+
+     static int findMax(int[] arr, int index) {
+        
+        if (index == arr.length - 1) {
+            return arr[index];
+        }
+  
+        int max = findMax(arr, index + 1);
+
+        return Math.max(arr[index], max);
+    }
+
+    static int fact(int n){
+        
+        if(n == 1){
+            return 1;
+        }
+        return n*fact(n-1);
+    }
+
+    static int find1(int[] checkpoints,int s, int e,int target){
+        while(s <= e){
+        int mid = (s + e)/2;
+        if(checkpoints[mid] == target){
+            return mid;
+        }
+        if(checkpoints[mid] < target){
+           return find1(checkpoints,mid+1,e,target);
+        }else{
+
+            return find1(checkpoints,s,mid-1,target);
+        }
+        
+        }
+        return -1;
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String name = "madam";
+        int n = name.length()-1;
+        access(name,0,n);
+
+        System.out.println("Enter the no of levels ");
+        int level = 5;
+        int total = quantumjumps(level);
+        System.out.println("the total no of jumps are : " + total);
+        
+        int time = 5;
+        System.out.println("mission Starts in ");
+        countdown(time);
+        String r1 = "mission";
+        read(r1,6);
+
+        int[] frames = {45, 78, 92, 67, 89};
+         System.out.println("Highest score is " + findMax(frames, 0));
+        sc.close();
+
+        System.out.println("the auth Value is "+fact(5));
+
+        int[] checkpoints = {10 , 20 , 30 , 40 ,50 ,60, 70 };
+
+        System.out.println("package found at position : "+find1(checkpoints,0,6,50));
+
+        HashMap<String, Integer> frequency = new HashMap<>();
+        String msg = "Hello Hii I am Hello I hi";
+        String[] words = msg.split(" ");
+        
+        for(String word: words){
+            if(frequency.containsKey(word)){
+                frequency.put(word,frequency.get(word)+1);
+            }
+            else{
+                frequency.put(word,1);
+            }
+        }
+        System.out.println(frequency);
+
+
+    HashMap<Character,Integer> charCount = new HashMap<>();
+    String str = "aabbffnnmggjjk";
+
+    for(int i = 0 ; i < str.length();i++){
+        char ch = str.charAt(i);
+        if(charCount.containsKey(ch)){
+            charCount.put(ch,charCount.get(ch)+1);
+        }
+        else{
+            charCount.put(ch,1);
+        }
+    }
+    System.out.println(charCount);
+    
+    for(char ch : charCount.keySet()){
+        if(charCount.get(ch) == 1){
+            System.out.println(charCount.get(ch));
+            System.out.println("the character with first unique occurance is : "+ch);
+            return;
+        }
+        }
+   
+            System.out.println("no character with unique occurance ");
+
+
+
+    }
+}
+//a multinational cs company stores sencitive data in a chain of encrypted servers each server contains a security key and a reference to the next server in the chain during a security audit the company needs to calculate the final authentication value generated by all servers the audit software can process only one server at a time and must use the same logic repeatedly for the remaining servers the last server returns a value of one and ends the process input int serverlevel = 5
+
+//an international logistics company packages moment through different check point every package passes through a scequence of ckeckpoints and the tracking systems stores them in a sorted list to quickly locate a package the system repeatedly devides such area into small section instead of checking every checkpoint the sw team has decided to implement this search using recursion find the location of the target package int checkpoints = 10 , 20 , 30 , 40 ,50 ,60, 70 target = 50 package found at index 4
