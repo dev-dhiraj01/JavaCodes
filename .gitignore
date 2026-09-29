@@ -1,1 +1,15 @@
 .vscode/
+
+# Java compiled files
+*.class
+
+# VS Code temporary files
+tempCodeRunnerFile.*
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Build output
+out/
+target/
