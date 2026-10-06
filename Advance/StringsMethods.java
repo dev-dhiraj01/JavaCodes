@@ -52,5 +52,33 @@ public class StringsMethods {
         }
         System.out.println(count);
         System.out.println(chars);
+
+        String a = "a hello ";
+        String b = "a";
+        System.out.println(a.length());
+        System.out.println(b.length());
+        System.out.println(a.charAt(0));
+        System.out.println(a.contains("he"));
+        System.out.println(a.substring(3, 6));
+        System.out.println(a.equals(b));
+        System.out.println(a.equalsIgnoreCase(b));
+        System.out.println(a.toUpperCase());
+        System.out.println(a.toLowerCase());
+        System.out.println(a.trim());
+        System.out.println(a.isEmpty());
+        System.out.println(a.isBlank());
+        boolean g = true;
+        System.out.println(String.valueOf(g));
+        System.out.println(a.startsWith("b"));
+        System.out.println(a.endsWith("  "));
+        System.out.println(a.toCharArray());
+        String n = a.replaceAll("[a-z]", "9");
+        System.out.println(n);
+        System.out.println(a.concat(b));
+
+        a = "apple";
+        b = "banana";
+
+        System.out.println(a.compareTo(b));
     }
 }
