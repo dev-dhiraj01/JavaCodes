@@ -1,4 +1,4 @@
-import java.util.Scanner;
+// import java.util.Scanner;
 
 // constructor
 // class Student {
@@ -62,7 +62,7 @@ public class base {
        int age ;
         age = 10;
         System.out.println("age is " + age);
-        Test obj = new Test();
+        // Test obj = new Test();
         // Test obj1 = new Test(10);
         // obj.sal = 44;
         // obj.set(23,"Dhiraj");

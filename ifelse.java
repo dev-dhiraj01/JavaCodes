@@ -9,6 +9,7 @@ public class ifelse {
         } else {
             System.out.println("not eligible for voting");
         }
+            S.close();
     }
 
 }

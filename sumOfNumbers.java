@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+ class Main {
     static int total(int[] arr){
 
         int ans = 0;
@@ -19,5 +19,6 @@ public class Main {
         arr[i] = sc.nextInt();
     }   
     System.out.println(total(arr)); 
+    sc.close();
     }
 }

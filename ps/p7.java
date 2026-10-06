@@ -31,8 +31,10 @@ public class p7 {
         try {
             // Condition to throw exceptions
             if (ride.equals("Car") && location.equals("Water")) {
+                sc.close();
                 throw new InvalidRideException("Error: Car cannot be driven on Water!");
             } else if (ride.equals("Boat") && location.equals("Land")) {
+                sc.close();
                 throw new InvalidRideException("Error: Boat cannot be ridden on Land!");
             } else {
                 System.out.println("\nYou are riding a " + ride + " on " + location + ".");

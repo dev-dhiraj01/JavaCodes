@@ -36,7 +36,7 @@ public class arrays {
                 System.out.println();
             }
         }
-
+        S.close();
     }
     
 }

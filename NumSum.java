@@ -22,5 +22,7 @@ class NumSum{
 	
 	System.out.println(" Result : " + result );
 
+	s.close();
+	
 	}
 }
