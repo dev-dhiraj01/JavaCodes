@@ -23,6 +23,7 @@ ArrayList <Integer> list = new ArrayList<>();
     coll.add(50);
     coll.add(42);
     coll.add(45);
+    coll.add(30);
     System.out.println(coll);
 
     Collections.sort(coll, Collections.reverseOrder());
