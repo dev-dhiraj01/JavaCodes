@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Collections;
 
 public class ArrayLists {
     
@@ -16,6 +17,16 @@ ArrayList <Integer> list = new ArrayList<>();
     while(iterator.hasNext()){
         System.out.println(iterator.next());
     }
+
+
+    ArrayList<Integer> coll = new ArrayList<>();
+    coll.add(50);
+    coll.add(42);
+    coll.add(45);
+    System.out.println(coll);
+
+    Collections.sort(coll, Collections.reverseOrder());
+    System.out.println(coll);
 }
 
 }
