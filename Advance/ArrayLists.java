@@ -32,6 +32,8 @@ ArrayList <Integer> list = new ArrayList<>();
     // coll.sort(Collections.reverseOrder());
 
     System.out.println(coll);
+
+    System.out.println(coll.indexOf(42));
 }
 
 }

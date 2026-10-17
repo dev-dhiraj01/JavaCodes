@@ -6,7 +6,7 @@
         }
     }
 
-    class Student {
+    class Student{
         String name;
         Address address;
 
@@ -45,6 +45,8 @@
 
             System.out.println(d1.address.city);
             System.out.println(d2.address.city);
+
+
         }
     }
 
