@@ -26,6 +26,11 @@ ArrayList <Integer> list = new ArrayList<>();
     System.out.println(coll);
 
     Collections.sort(coll, Collections.reverseOrder());
+
+    //Alternatives sorting methods
+    // coll.sort(null);
+    // coll.sort(Collections.reverseOrder());
+
     System.out.println(coll);
 }
 
