@@ -36,7 +36,7 @@ public class ArrayLists {
 
         System.out.println(coll.indexOf(42));
 
-        LinkedList<Integer> lis = new LinkedList();
+        LinkedList<Integer> lis = new LinkedList<>();
 
         lis.add(10);
     }
