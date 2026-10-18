@@ -1,3 +1,10 @@
+
+                //                     Queue
+                //                       |
+                //     -----------------------------------------
+                //     |                   |                   |
+                // ArrayDqueue         LinkedList          PriorityQueue
+
 import java.util.Stack;
 // import java.util.Queue;
 import java.util.LinkedList;
@@ -18,7 +25,7 @@ public class StlStack {
      System.out.println(stack); 
      System.out.println(stack.search(40));
 
-     Queue<Integer> que = new LinkedList<>();
+     Deque<Integer> que = new LinkedList<>();
         que.add(10);    // returns exception if lement not added 
         que.offer(20); // returns false if element not added 
         que.add(30);
@@ -26,6 +33,7 @@ public class StlStack {
         que.remove();
         System.out.println(que);
         System.out.println(que.poll()); // removes and returns the front element
+        que.addFirst(40);
         System.out.println(que);
 
     }
