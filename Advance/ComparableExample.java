@@ -12,8 +12,11 @@ class Student1 implements Comparable<Student1> {
     }
 
     @Override
-    public int compareTo(Student1 other) {
-        return Integer.compare(this.age, other.age);
+    public int compareTo(Student1 that) {
+        if(this.age == that.age){
+           return this.name.compareTo(that.name);
+        }
+        return Integer.compare(this.age ,that.age);
     }
 }
 
@@ -21,10 +24,10 @@ public class ComparableExample {
     public static void main(String[] args) {
         ArrayList<Student1> list = new ArrayList<>();
 
-        list.add(new Student1(103, "Amit",25));
+        list.add(new Student1(103, "Amit",22));
         list.add(new Student1(101, "Dhiraj",22));
-        list.add(new Student1(102, "Rahul",46));
-        list.add(new Student1(105,"Pranav",34));
+        list.add(new Student1(102, "Rahul",25));
+        list.add(new Student1(105,"Pranav",56));
 
         Collections.sort(list);
 
