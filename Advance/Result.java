@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 class Animal{
-
+        
     public void show(){
         System.out.println("hello 1");
     }
@@ -20,6 +20,7 @@ class Result {
     public static void main(String args[]) {
         Animal a = new Dog();
         a.bark();
+        
 
         List<ClgStudent> results = new ArrayList<>();
 
@@ -32,6 +33,7 @@ class Result {
         Collections.sort(results, new CompareTotal());
         // One line Solution for sorting
         // results.sort((a,b) -> Double.compare(a.total,b.total));
+    
         for (ClgStudent result : results) {
             System.out.println(result.roll + " " + result.name + " " + result.total);
         }
