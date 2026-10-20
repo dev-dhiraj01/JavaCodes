@@ -1,10 +1,25 @@
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
-// import java.util.Comparator;
 
+class Animal{
+
+    public void show(){
+        System.out.println("hello 1");
+    }
+    public void bark(){}
+}
+
+class Dog extends Animal{
+
+    public void bark(){
+        System.out.println("hello 2");
+    }
+}
 class Result {
     public static void main(String args[]) {
+        Animal a = new Dog();
+        a.bark();
 
         List<ClgStudent> results = new ArrayList<>();
 
@@ -15,7 +30,8 @@ class Result {
         results.add(new ClgStudent(105, "Anchit", 55, 95, 96, 83, 78));
 
         Collections.sort(results, new CompareTotal());
-
+        // One line Solution for sorting
+        // results.sort((a,b) -> Double.compare(a.total,b.total));
         for (ClgStudent result : results) {
             System.out.println(result.roll + " " + result.name + " " + result.total);
         }
