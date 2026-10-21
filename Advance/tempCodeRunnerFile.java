@@ -1,53 +1,28 @@
-class Node {
-    int data;
-    Node next;
 
-    Node(int data) {
-        this.data = data;
-        this.next = null;
-    }
-}
+// class Box<T> {
+//     T var;
 
-class LinkedList {
-    Node head;
+//     Box(T var) {
+//         this.var = var;
+//     }
 
-    // Insert at end
-    void insert(int data) {
-        Node newNode = new Node(data);
+//     public T show() {
+//         return var;
+//     }
+// }
 
-        if (head == null) {
-            head = newNode;
-            return;
-        }
+// class TypeInference {
 
-        Node temp = head;
+//     public static <T, U> void show(T first, U second) {
+//         System.out.println(first + " " + second);
+//     }
 
-        while (temp.next != null) {
-            temp = temp.next;
-        }
+//     public static void main(String args[]) {
 
-        temp.next = newNode;
-    }
+//         show(10, "hello");
 
-    // Display list
-    void display() {
-        Node temp = head;
+//         Box<Integer> b = new Box<>(10);
 
-        while (temp != null) {
-            System.out.print(temp.data + " -> ");
-            temp = temp.next;
-        }
-
-        System.out.println("null");
-    }
-
-    public static void main(String[] args) {
-        LinkedList list = new LinkedList();
-
-        list.insert(10);
-        list.insert(20);
-        list.insert(30);
-
-        list.display();
-    }
-}
+//         System.out.println(b.show());
+//     }
+// }
