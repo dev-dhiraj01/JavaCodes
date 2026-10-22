@@ -1,3 +1,4 @@
+package Training;
 /*
 
 can a array have duplicate elements

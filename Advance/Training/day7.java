@@ -1,3 +1,4 @@
+package Training;
 import java.util.Scanner;
 import java.util.HashMap;
 

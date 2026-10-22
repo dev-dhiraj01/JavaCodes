@@ -1,3 +1,4 @@
+package Training;
 import java.util.Scanner;
 import java.util.HashMap;
 //standing betn two mirrors Imagine you are standing in a dressing room with a mirror directly in front of you and another directly behind you the .process the front mirror reflects the back mirror which reflects the front mirror creating an image inside an image inside an image the reflection repeates until the image becoms too tiny 

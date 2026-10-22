@@ -1,3 +1,4 @@
+package Training;
 // package Advance;
 
 public class day1 {
